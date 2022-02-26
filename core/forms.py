@@ -45,8 +45,3 @@ class UserRegisterForm(UserCreationForm):
         return user 
 
 
-
-class AddNote(forms.ModelForm):
-    class Meta:
-        model = Notes
-        fields = ['title', 'description']

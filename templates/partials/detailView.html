@@ -1,6 +1,6 @@
 
 {% extends 'base.html' %} 
-
+{% load blog_extras %}
 {% block content %}
 
 <div class="mr-auto">
@@ -8,9 +8,9 @@
   {{ posts.title }}
 </h1>
 
-<p class="text-lg my-2 leading-7 text-gray-400 my-20">
-  {{posts.description}}
-</p>
+<div class="text-lg my-2 leading-7 text-gray-400 my-20">
+  {{posts.description | convert_markdown | safe}}
+</div>
 </div>
 
 {% endblock content %}

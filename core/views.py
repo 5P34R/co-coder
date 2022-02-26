@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-from .forms import UserRegisterForm, AddNote
+from .forms import UserRegisterForm
 from .models import Notes
 
 def index(request):
@@ -81,8 +81,13 @@ def search(request):
         return render(request, 'blog.html',{'posts':posts})
 
 
-
-
 def add_notes(request):
-    form = AddNote()
-    return render(request, 'notes/addnote.html', {'form':form})
+    if request.method == 'POST':
+        title = request.POST['title']
+        des = request.POST['des']
+        if title and des:
+            obj = Notes.objects.create(title=title, description=des, user=request.user)
+            breakpoint()
+            obj.save()
+        return redirect('/blog')
+    return render(request, 'notes/addnote.html')
