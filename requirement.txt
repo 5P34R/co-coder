@@ -4,7 +4,6 @@ charset-normalizer==2.0.12
 Django==4.0.2
 idna==3.3
 Markdown==3.3.4
-martor==1.6.11
 requests==2.27.1
 sqlparse==0.4.2
 tzdata==2021.5

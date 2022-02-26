@@ -12,5 +12,5 @@ urlpatterns = [
     path('logout/', logout_view, name='logout'),
     path('sign-up/', register, name='signup'),
 
-    path('add-notes/', add_notes, name="add-note")
+    path('add-notes/', add_notes, name="add-notes")
 ]

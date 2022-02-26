@@ -11,13 +11,13 @@
     <button class="p-1 font-medium sm:p-4 text-gray-100 uppercase hover:text-cyan-500">Post</button>
     
     {% if request.user.is_authenticated %}
-    <a href="#">
+    <a href="{% url 'core:add-notes' %}">
         <button class="p-1 font-medium  sm:p-4 text-gray-100 uppercase hover:text-cyan-500">Create Blog</button>
     </a>
 
     <a href="{% url 'core:logout' %}">
         <button class="p-1 font-medium  sm:p-4 text-gray-100 uppercase hover:text-cyan-500">Log Out</button>
-    </a>
+    </a>    
     
     {% else %}
     <a href="{% url 'core:login' %}">

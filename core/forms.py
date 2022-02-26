@@ -1,8 +1,10 @@
+from dataclasses import fields
 from django.contrib.auth.models import User  
 from django.contrib.auth.forms import UserCreationForm  
 from django.core.exceptions import ValidationError  
 from django import forms  
- 
+
+from .models import Notes
  
 class UserRegisterForm(UserCreationForm):
 
@@ -41,3 +43,10 @@ class UserRegisterForm(UserCreationForm):
             self.cleaned_data['password1']  
         )  
         return user 
+
+
+
+class AddNote(forms.ModelForm):
+    class Meta:
+        model = Notes
+        fields = ['title', 'description']
