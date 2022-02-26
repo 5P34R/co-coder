@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ufau=(e*xa2##fks(5!nh=q$m)*^49(xj2(mj8_boxbp&dlgm3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 LOGIN_URL = 'core:login'
 # Application definition
