@@ -11,9 +11,8 @@
   A blog created with Django and Tailwind.css
 </p>
 
+{% if posts %}
 {% include 'partials/post.html' %}
-
-
 <div class="flex justify-end mr-3">on>
   <a href="{% url 'core:blog' %}">
     <button class="text-gray-100 bg-gradient-to-r from-blue-500 to-cyan-500  rounded-full p-2 px-5 flex uppercase">All blogs
@@ -23,4 +22,12 @@
         </svg></span>
   </button>
 </div>
+
+{% else %}
+<a href="{% url 'core:add-notes' %}">
+  <h1 class="text-3xl text-center text-white hover:text-cyan-500">Create new Dairy</h1>
+</a>
+{% endif %}
+
+
 {% endblock content %}

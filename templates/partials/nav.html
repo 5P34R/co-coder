@@ -8,7 +8,6 @@
     <a href="{% url 'core:blog' %}">
         <button class="p-1 font-medium text-gray-100 sm:p-4 uppercase hover:text-cyan-500">Blog</button>
     </a>
-    <button class="p-1 font-medium sm:p-4 text-gray-100 uppercase hover:text-cyan-500">Post</button>
     
     {% if request.user.is_authenticated %}
     <a href="{% url 'core:add-notes' %}">
@@ -52,12 +51,24 @@
     <ul class="absolute top-20 right-0 h-full space-y-10">
         <li class="active">
             <a href="/" class="block px-2 py-4 text-gray-100 bg-black font-semibold">Home</a></li>
+            {% if request.user.is_authenticated %}
         <li>
-            <a href="/" class="block px-2 py-4 text-gray-100 bg-black font-semibold transition duration-300">All Blogs</a></li>
+            <a href="{% url 'core:add-notes' %}" class="block px-2 py-4 text-gray-100 bg-black font-semibold transition duration-300">Add Blog</a></li>
         <li>
-            <a href="#about" class="block px-2 py-4 text-gray-100 bg-black font-semibold transition duration-300">About</a></li>
-        <li>
-            <a href="#contact" class="block px-2 py-4 text-gray-100 bg-black font-semibold transition duration-300">Contact Us</a></li>
+            <a href="{% url 'core:logout' %}" class="block px-2 py-4 text-gray-100 bg-black font-semibold transition duration-300">Log out</a></li>
+            {% else %}
+
+            <li>
+                <a href="{% url 'core:login' %}" class="block px-2 py-4 text-gray-100 bg-black font-semibold transition duration-300">Login</a></li>
+            <li>
+                <a href="{% url 'core:signup' %}" class="block px-2 py-4 text-gray-100 bg-black font-semibold transition duration-300">Sign up</a></li>
+
+            
+                
+            <a href="{% url 'core:signup' %}">
+                <button class="block px-2 py-4 text-gray-100 bg-black font-semibold transition duration-300 px-">register</button>
+            </a>
+        {% endif %}
     </ul>
 </div>
 </nav>
