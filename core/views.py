@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .forms import UserRegisterForm
@@ -13,6 +13,9 @@ def index(request):
     }
     return render(request, 'index.html', context)
 
+def logout_view(request):
+    logout(request)
+    return redirect('/')
 
 def user_login(request):
     if request.method == 'POST':
@@ -77,3 +80,8 @@ def search(request):
         posts = Notes.objects.all()
         return render(request, 'blog.html',{'posts':posts})
 
+
+
+
+def add_notes(request):
+    return render(request, 'notes/addnote.html')
