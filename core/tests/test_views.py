@@ -1,9 +1,6 @@
-from msilib.schema import SelfReg
-from urllib import response
 from django.test import TestCase, Client
 from django.urls import reverse
 
-from core.views import *
 
 class TestViews(TestCase):
 
