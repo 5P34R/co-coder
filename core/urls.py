@@ -1,6 +1,7 @@
 from django.urls import path
 
-from .views import index, user_login,logout_view, register, detailedView,search, blog, add_notes
+from .views import index, detailedView,search, blog, add_notes
+from .auth_views import user_login,logout_view, register
 
 app_name = 'core'
 urlpatterns = [
