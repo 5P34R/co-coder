@@ -32,10 +32,12 @@ git clone https://github.com/VishDroid-dev/co-coder/
 cd co-coder
 python -m venv venv
 
-,\venv\Script\activate (windows cmd)
+.\venv\Script\activate (windows cmd)
 source venv/Script/activate (windows bash)
 source venv/bin/activate (linux)
 
 pip install -r requirements.txt
 python manage.py runserver
 ```
+open [http://127.0.0.1:8000](http://127.0.0.1:8080) in web browser
+Happy Hacking!!!🎉
