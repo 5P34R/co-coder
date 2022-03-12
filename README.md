@@ -16,14 +16,14 @@ Step1: Account created with email and is signed in using the username and passwo
 Step 2: Diaries are entered and saved with title. In hompage latest one is shown first.
 
 # Libraries used
-- Django
-- tailwindcss
+- [Django](https://www.djangoproject.com/)
+- [tailwindcss](https://tailwindcss.com/)
 
 # How to configure
 - Wsgi 
 - Sqlite3 
 - custom templatetag to html to markdown
-- 
+
 # How to Run
 manage.py is the entry file
 for runnning locally 
