@@ -25,8 +25,8 @@ Team ID : Python / 18
 - custom templatetag to html to markdown
 
 # How to Run
-manage.py is the entry file
-for runnning locally 
+manage.py is the entry file<br>
+For runnning locally:
 ```bash
 python manage.py runserver
 ```
