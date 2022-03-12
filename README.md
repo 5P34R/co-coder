@@ -12,8 +12,8 @@ Team ID : Python / 18
 [link to video](https://www.loom.com/share/5836d6d82b464597b8906cf4137b0fb6)
 
 # How it Works ?
-Step1: Account created with email and is signed in using the username and password
-Step 2: Diaries are entered and saved with title. In hompage latest one is shown first.
+- Step1: Account created with email and is signed in using the username and password
+- Step 2: Diaries are entered and saved with title. In hompage latest one is shown first.
 
 # Libraries used
 - [Django](https://www.djangoproject.com/)
