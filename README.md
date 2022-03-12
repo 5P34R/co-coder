@@ -28,5 +28,14 @@ Team ID : Python / 18
 manage.py is the entry file<br>
 For runnning locally:
 ```bash
+git clone https://github.com/VishDroid-dev/co-coder/
+cd co-coder
+python -m venv venv
+
+,\venv\Script\activate (windows cmd)
+source venv/Script/activate (windows bash)
+source venv/bin/activate (linux)
+
+pip install -r requirements.txt
 python manage.py runserver
 ```
