@@ -39,5 +39,5 @@ source venv/bin/activate (linux)
 pip install -r requirements.txt
 python manage.py runserver
 ```
-open [http://127.0.0.1:8000](http://127.0.0.1:8080) in web browser
-Happy Hacking!!!🎉
+open [http://127.0.0.1:8000](http://127.0.0.1:8080) in web browser<br>
+## Happy Hacking!!!🎉
